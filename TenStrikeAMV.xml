@@ -5,358 +5,448 @@
     <Triggers>
       <Trigger Enabled="true" Sequential="True" Name="TwinHPTracker" Id="4ea93e76-0c1a-4cc6-956e-5c7dc169720a" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="TrackerStart" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TrackerStart" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:TwinID}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="TwinsHP" VariableExpression="round((${_ffxiventity[${var:TwinID}].currenthp}/${_ffxiventity[${var:TwinID}].maxhp}), 2)*100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="TwinsHP" VariableExpression="round((${_ffxiventity[${var:TwinID}].currenthp}/${_ffxiventity[${var:TwinID}].maxhp}), 2)*100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="NeroLinkXPos1" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="NeroLinkXPos1" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinsHP}" ExpressionTypeL="Numeric" ExpressionR="74" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:NeroLinkXPos1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="NeroLinkXPos2" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="NeroLinkXPos2" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinsHP}" ExpressionTypeL="Numeric" ExpressionR="44" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:NeroLinkXPos2}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="NeroLinkXPos3" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="NeroLinkXPos3" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinsHP}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:NeroLinkXPos3}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="NeroLinkYPos1" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="NeroLinkYPos1" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinsHP}" ExpressionTypeL="Numeric" ExpressionR="74" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:NeroLinkYPos1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="NeroLinkYPos2" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="NeroLinkYPos2" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinsHP}" ExpressionTypeL="Numeric" ExpressionR="44" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:NeroLinkYPos2}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="NeroLinkYPos3" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="NeroLinkYPos3" VariableExpression="0.02*${_ffxiventity[${var:TwinID}].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinsHP}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:NeroLinkYPos3}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="9" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4ea93e76-0c1a-4cc6-956e-5c7dc169720a" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1000" Asynchronous="False">
+          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4ea93e76-0c1a-4cc6-956e-5c7dc169720a" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1000" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${evar:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:TwinID}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="10" LogMessageText="Pos1X: ${var:NeroLinkXPos1}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="10" LogMessageText="Pos1X: ${var:NeroLinkXPos1}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="11" LogMessageText="Pos1Y: ${var:NeroLinkYPos1}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="11" LogMessageText="Pos1Y: ${var:NeroLinkYPos1}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="12" LogMessageText="Pos2X: ${var:NeroLinkXPos2}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="12" LogMessageText="Pos2X: ${var:NeroLinkXPos2}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="13" LogMessageText="Pos2Y: ${var:NeroLinkYPos2}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="13" LogMessageText="Pos2Y: ${var:NeroLinkYPos2}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="14" LogMessageText="Pos3X: ${var:NeroLinkXPos3}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="14" LogMessageText="Pos3X: ${var:NeroLinkXPos3}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="15" LogMessageText="Pos3Y: ${var:NeroLinkYPos3}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="15" LogMessageText="Pos3Y: ${var:NeroLinkYPos3}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="UcobReset" Id="b6181ff9-75de-48fb-9a55-3bd96508e8a7" RegularExpression="\[.{14}21:[A-F0-9]{8}:400000(?&gt;03|10):">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="UcobReset" Id="b6181ff9-75de-48fb-9a55-3bd96508e8a7" RegularExpression="^33\|[^|]*\|[^|]*\|400000(?&gt;03|10)\|">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableName="TwinID" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="1" VariableName="TwinID" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableName="TwinsHP" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="2" VariableName="TwinsHP" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableName="NeroLinkXPos1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="3" VariableName="NeroLinkXPos1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableName="NeroLinkXPos2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="4" VariableName="NeroLinkXPos2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableName="NeroLinkXPos3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="5" VariableName="NeroLinkXPos3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableName="NeroLinkYPos1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="6" VariableName="NeroLinkYPos1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" VariableName="NeroLinkYPos2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="7" VariableName="NeroLinkYPos2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" VariableName="NeroLinkYPos3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="8" VariableName="NeroLinkYPos3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="9" ListVariableName="NeroLinkXPos" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="9" ListVariableName="NeroLinkXPos" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="10" ListVariableName="NeroLinkYPos" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="10" ListVariableName="NeroLinkYPos" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="11" ListVariableName="PlayerXPos" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="11" ListVariableName="PlayerXPos" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="12" ListVariableName="PlayerYPos" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="12" ListVariableName="PlayerYPos" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="13" ListVariableName="DistanceFrom1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="13" ListVariableName="DistanceFrom1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="14" ListVariableName="DistanceFrom2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="14" ListVariableName="DistanceFrom2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="15" ListVariableName="DistanceFrom3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="15" ListVariableName="DistanceFrom3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="16" LogLevel="-1" MouseX="" MouseY="" VariableName="TwinDead" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="16" VariableName="TwinDead" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="17" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="17" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="18" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="18" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="19" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="19" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="20" ListVariableName="DistanceFrom1Join" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="20" ListVariableName="DistanceFrom1Join" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="21" ListVariableName="DistanceFrom2Join" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="21" ListVariableName="DistanceFrom2Join" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="22" ListVariableName="DistanceFrom3Join" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="22" ListVariableName="DistanceFrom3Join" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="23" LogLevel="-1" MouseX="" MouseY="" VariableName="DistanceFrom1Split" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="23" VariableName="DistanceFrom1Split" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="24" LogLevel="-1" MouseX="" MouseY="" VariableName="DistanceFrom2Split" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="24" VariableName="DistanceFrom2Split" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="25" LogLevel="-1" MouseX="" MouseY="" VariableName="DistanceFrom3Split" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="25" VariableName="DistanceFrom3Split" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="26" LogLevel="-1" MouseX="" MouseY="" VariableName="BreakoutCounter" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="26" VariableName="BreakoutCounter" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="27" ListVariableName="HatchPlayer" LogLevel="-1" MouseX="" MouseY="" VariableName="HatchPlayer" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="27" ListVariableName="HatchPlayer" VariableName="HatchPlayer" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
           <Action OrderNumber="28" KeypressType="WindowMessage" KeyPressExpression="{F9}" KeyPressCode="120" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="29" LogLevel="-1" MouseX="" MouseY="" VariableName="TrackerStart" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="29" VariableName="TrackerStart" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="30" LogLevel="-1" MouseX="" MouseY="" VariableName="NCount" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="30" VariableName="NCount" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="31" ListVariableName="Player1DistanceFromNero" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="31" ListVariableName="Player1DistanceFromNero" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="32" ListVariableName="Player2DistanceFromNero" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="32" ListVariableName="Player2DistanceFromNero" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="33" ListVariableName="Player3DistanceFromNero" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="33" ListVariableName="Player3DistanceFromNero" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="34" LogLevel="-1" MouseX="" MouseY="" VariableName="Player1NeroSplit" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="34" VariableName="Player1NeroSplit" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="35" LogLevel="-1" MouseX="" MouseY="" VariableName="Player2NeroSplit" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="35" VariableName="Player2NeroSplit" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="36" LogLevel="-1" MouseX="" MouseY="" VariableName="Player3NeroSplit" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="36" VariableName="Player3NeroSplit" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="37" ListVariableName="Player1NeroPref" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="37" ListVariableName="Player1NeroPref" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="38" ListVariableName="Player2NeroPref" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="38" ListVariableName="Player2NeroPref" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="39" ListVariableName="Player3NeroPref" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="39" ListVariableName="Player3NeroPref" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="PlayerPositions" Id="fae28d79-b947-4453-976c-ef1cc9ea6989" RegularExpression="27\|(?:[^|]*)\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' 0-9]{1,31})\|[A-F0-9]{4}\|[A-F0-9]{4}\|00(76)" MutexToCapture="PlayerPos">
         <Actions>
-          <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="HatchPlayer" ListVariableExpression="${name}" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="HatchPlayer" ListVariableExpression="${name}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[1].x}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="2" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[1].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[2].x}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[2].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[3].x}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[3].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[4].x}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[4].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[4].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[5].x}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="6" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[5].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[5].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[6].x}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="7" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[6].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[6].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="8" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[7].x}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="8" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[7].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[7].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="9" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[8].x}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="9" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerXPos" ListVariableExpression="0.02*${_ffxivparty[8].x}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[8].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="10" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[1].y}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="10" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[1].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="11" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[2].y}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="11" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[2].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="12" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[3].y}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="12" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[3].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="13" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[4].y}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="13" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[4].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[4].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="14" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[5].y}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="14" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[5].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[5].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="15" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[6].y}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="15" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[6].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[6].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="16" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[7].y}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="16" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[7].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[7].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="17" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[8].y}+6.05" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="17" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="PlayerYPos" ListVariableExpression="0.02*${_ffxivparty[8].y}+6.05" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[8].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="18" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9b357f48-7bcf-42d9-8bec-ecb7de3d13e4" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="18" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9b357f48-7bcf-42d9-8bec-ecb7de3d13e4" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:PlayerYPos.size}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:PlayerXPos.size}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:HatchPlayer.size}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="19" LogMessageText="Player1 X pos ${lvar:PlayerXPos[1]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="19" LogMessageText="Player1 X pos ${lvar:PlayerXPos[1]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="20" LogMessageText="Player1 Y pos ${lvar:PlayerYPos[1]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="20" LogMessageText="Player1 Y pos ${lvar:PlayerYPos[1]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="21" LogMessageText="Player2 X pos ${lvar:PlayerXPos[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="21" LogMessageText="Player2 X pos ${lvar:PlayerXPos[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="22" LogMessageText="Player2 Y pos ${lvar:PlayerYPos[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="22" LogMessageText="Player2 Y pos ${lvar:PlayerYPos[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="23" LogMessageText="Player3 X pos ${lvar:PlayerXPos[3]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="23" LogMessageText="Player3 X pos ${lvar:PlayerXPos[3]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="24" LogMessageText="Player3 Y pos ${lvar:PlayerYPos[3]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="24" LogMessageText="Player3 Y pos ${lvar:PlayerYPos[3]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="25" LogMessageText="HatchPlayer Size ${lvar:HatchPlayer.size}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="25" LogMessageText="HatchPlayer Size ${lvar:HatchPlayer.size}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="DistanceSort" Id="b3d5e1d7-671e-4676-8cb0-6d3551a81476" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" ListVariableOp="SortAlphaAsc" ListVariableName="DistanceFrom1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="1" ListVariableOp="SortAlphaAsc" ListVariableName="DistanceFrom1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="DistanceFrom2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="2" ListVariableOp="SortAlphaAsc" ListVariableName="DistanceFrom2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" ListVariableOp="SortAlphaAsc" ListVariableName="DistanceFrom3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="3" ListVariableOp="SortAlphaAsc" ListVariableName="DistanceFrom3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" ListVariableOp="SortAlphaAsc" ListVariableName="Player1DistanceFromNero" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="4" ListVariableOp="SortAlphaAsc" ListVariableName="Player1DistanceFromNero" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" ListVariableOp="SortAlphaAsc" ListVariableName="Player2DistanceFromNero" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="5" ListVariableOp="SortAlphaAsc" ListVariableName="Player2DistanceFromNero" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" ListVariableOp="SortAlphaAsc" ListVariableName="Player3DistanceFromNero" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="6" ListVariableOp="SortAlphaAsc" ListVariableName="Player3DistanceFromNero" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68b6edd0-b63a-4409-a267-0b05b7ca04ec" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="68b6edd0-b63a-4409-a267-0b05b7ca04ec" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="TenStrikeMark3" Id="46b1636d-833d-4510-aac8-8b17b7c9af08" RegularExpression="" PeriodRefire="Deny">
         <Actions>
@@ -364,47 +454,57 @@
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressExpression="{F2}" KeyPressCode="113" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="{F3}" KeyPressCode="114" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="{F4}" KeyPressCode="115" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[4].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressExpression="{F5}" KeyPressCode="116" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[5].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressExpression="{F6}" KeyPressCode="117" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[6].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressExpression="{F7}" KeyPressCode="118" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[7].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressExpression="{F8}" KeyPressCode="119" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[8].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressExpression="{F9}" KeyPressCode="120" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="10000">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="TenStrikeMark1" Id="580591c8-3d67-4c52-ae93-d54b7cceebcb" RegularExpression="" PeriodRefire="Deny">
         <Actions>
@@ -412,47 +512,57 @@
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="{F2}" KeyPressCode="113" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="{F3}" KeyPressCode="114" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressExpression="{F4}" KeyPressCode="115" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[4].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressExpression="{F5}" KeyPressCode="116" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[5].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressExpression="{F6}" KeyPressCode="117" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[6].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressExpression="{F7}" KeyPressCode="118" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[7].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressExpression="{F8}" KeyPressCode="119" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[8].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a8c966fc-454d-46a0-b5db-44e6ca1c37fb" TriggerText="Mark2$$Fire" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="200">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="TenStrikeMark2" Id="a8c966fc-454d-46a0-b5db-44e6ca1c37fb" RegularExpression="" PeriodRefire="Deny">
         <Actions>
@@ -460,608 +570,741 @@
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="{F2}" KeyPressCode="113" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[2].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="{F3}" KeyPressCode="114" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[3].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressExpression="{F4}" KeyPressCode="115" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[4].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressExpression="{F5}" KeyPressCode="116" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[5].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressExpression="{F6}" KeyPressCode="117" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[6].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressExpression="{F7}" KeyPressCode="118" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[7].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressExpression="{F8}" KeyPressCode="119" KeyPressWindow="FINAL FANTASY XIV" VariableOp="SetString" VariableName="${var:Marker1}" VariableExpression="$(playerName)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[8].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="46b1636d-833d-4510-aac8-8b17b7c9af08" TriggerText="Mark2$$Fire" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="200">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="PostTwinPhase" Id="a45b1251-fc95-4204-9fa2-700b157293cd" RegularExpression="\[.{14}[0-9]{2}:[0-9A-F]{8}:[^:]*:26C0:">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="PostTwinPhase" Id="a45b1251-fc95-4204-9fa2-700b157293cd" RegularExpression="^21\|(?:[^|]*)\|(?:[^|]*)\|(?:[^|]*)\|26C0\|">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="TwinDead" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TwinDead" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkXPos" ListVariableExpression="${var:NeroLinkXPos1}" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="2" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkXPos" ListVariableExpression="${var:NeroLinkXPos1}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkXPos" ListVariableExpression="${var:NeroLinkXPos2}" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="3" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkXPos" ListVariableExpression="${var:NeroLinkXPos2}" ListVariableIndex="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkXPos" ListVariableExpression="${var:NeroLinkXPos3}" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="4" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkXPos" ListVariableExpression="${var:NeroLinkXPos3}" ListVariableIndex="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkYPos" ListVariableExpression="${var:NeroLinkYPos1}" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="5" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkYPos" ListVariableExpression="${var:NeroLinkYPos1}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkYPos" ListVariableExpression="${var:NeroLinkYPos2}" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="6" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkYPos" ListVariableExpression="${var:NeroLinkYPos2}" ListVariableIndex="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkYPos" ListVariableExpression="${var:NeroLinkYPos3}" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="7" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="NeroLinkYPos" ListVariableExpression="${var:NeroLinkYPos3}" ListVariableIndex="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="Initialize" Id="9c093c7b-e5ca-4961-9b6f-27baf2ab5f07" RegularExpression="\[.{14}[0-9]{2}:(?&lt;RealTwinID&gt;[0-9A-Z]{8}):[^:]*:26A8">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Initialize" Id="9c093c7b-e5ca-4961-9b6f-27baf2ab5f07" RegularExpression="^21\|(?:[^|]*)\|(?:[^|]*)\|(?:[^|]*)\|26A8\|">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="TwinID" VariableExpression="${RealTwinID}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="TwinID" VariableExpression="${RealTwinID}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:TwinID}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4ea93e76-0c1a-4cc6-956e-5c7dc169720a" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="50" Asynchronous="False">
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4ea93e76-0c1a-4cc6-956e-5c7dc169720a" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="50" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:TwinDead}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${evar:TrackerStart}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="SplitAndJoin" Id="68b6edd0-b63a-4409-a267-0b05b7ca04ec" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="DistanceFrom1Split" VariableExpression="${lvar:DistanceFrom1[1]}:${lvar:DistanceFrom1[2]}:${lvar:DistanceFrom1[3]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="1" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" VariableOp="SetString" VariableName="DistanceFrom1Split" VariableExpression="${lvar:DistanceFrom1[1]}:${lvar:DistanceFrom1[2]}:${lvar:DistanceFrom1[3]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="DistanceFrom2Split" VariableExpression="${lvar:DistanceFrom2[1]}:${lvar:DistanceFrom2[2]}:${lvar:DistanceFrom2[3]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="2" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" VariableOp="SetString" VariableName="DistanceFrom2Split" VariableExpression="${lvar:DistanceFrom2[1]}:${lvar:DistanceFrom2[2]}:${lvar:DistanceFrom2[3]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="DistanceFrom3Split" VariableExpression="${lvar:DistanceFrom3[1]}:${lvar:DistanceFrom3[2]}:${lvar:DistanceFrom3[3]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="3" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" VariableOp="SetString" VariableName="DistanceFrom3Split" VariableExpression="${lvar:DistanceFrom3[1]}:${lvar:DistanceFrom3[2]}:${lvar:DistanceFrom3[3]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="Player1NeroSplit" VariableExpression="${lvar:Player1DistanceFromNero[1]}:${lvar:Player1DistanceFromNero[2]}:${lvar:Player1DistanceFromNero[3]}:${lvar:HatchPlayer[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="4" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" VariableOp="SetString" VariableName="Player1NeroSplit" VariableExpression="${lvar:Player1DistanceFromNero[1]}:${lvar:Player1DistanceFromNero[2]}:${lvar:Player1DistanceFromNero[3]}:${lvar:HatchPlayer[1]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="Player2NeroSplit" VariableExpression="${lvar:Player2DistanceFromNero[1]}:${lvar:Player2DistanceFromNero[2]}:${lvar:Player2DistanceFromNero[3]}:${lvar:HatchPlayer[2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="5" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" VariableOp="SetString" VariableName="Player2NeroSplit" VariableExpression="${lvar:Player2DistanceFromNero[1]}:${lvar:Player2DistanceFromNero[2]}:${lvar:Player2DistanceFromNero[3]}:${lvar:HatchPlayer[2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="Player3NeroSplit" VariableExpression="${lvar:Player3DistanceFromNero[1]}:${lvar:Player3DistanceFromNero[2]}:${lvar:Player3DistanceFromNero[3]}:${lvar:HatchPlayer[3]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="6" ListVariableOp="Join" ListVariableName="DistanceFrom1" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Split" VariableOp="SetString" VariableName="Player3NeroSplit" VariableExpression="${lvar:Player3DistanceFromNero[1]}:${lvar:Player3DistanceFromNero[2]}:${lvar:Player3DistanceFromNero[3]}:${lvar:HatchPlayer[3]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" ListVariableOp="Split" ListVariableName="DistanceFrom1Split" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Join" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="7" ListVariableOp="Split" ListVariableName="DistanceFrom1Split" ListVariableExpression=":" ListVariableTarget="DistanceFrom1Join" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="8" ListVariableOp="Split" ListVariableName="DistanceFrom2Split" ListVariableExpression=":" ListVariableTarget="DistanceFrom2Join" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="8" ListVariableOp="Split" ListVariableName="DistanceFrom2Split" ListVariableExpression=":" ListVariableTarget="DistanceFrom2Join" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="9" ListVariableOp="Split" ListVariableName="DistanceFrom3Split" ListVariableExpression=":" ListVariableTarget="DistanceFrom3Join" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="9" ListVariableOp="Split" ListVariableName="DistanceFrom3Split" ListVariableExpression=":" ListVariableTarget="DistanceFrom3Join" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="10" ListVariableOp="Split" ListVariableName="Player1NeroSplit" ListVariableExpression=":" ListVariableTarget="Player1NeroPref" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="10" ListVariableOp="Split" ListVariableName="Player1NeroSplit" ListVariableExpression=":" ListVariableTarget="Player1NeroPref" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="11" ListVariableOp="Split" ListVariableName="Player2NeroSplit" ListVariableExpression=":" ListVariableTarget="Player2NeroPref" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="11" ListVariableOp="Split" ListVariableName="Player2NeroSplit" ListVariableExpression=":" ListVariableTarget="Player2NeroPref" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="12" ListVariableOp="Split" ListVariableName="Player3NeroSplit" ListVariableExpression=":" ListVariableTarget="Player3NeroPref" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="12" ListVariableOp="Split" ListVariableName="Player3NeroSplit" ListVariableExpression=":" ListVariableTarget="Player3NeroPref" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="13" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="589ddcab-6b63-492d-8721-d7f9d0e4df7b" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="589ddcab-6b63-492d-8721-d7f9d0e4df7b" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="14" LogMessageText="CombinedList1: ${var:DistanceFrom1Split}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="14" LogMessageText="CombinedList1: ${var:DistanceFrom1Split}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="15" LogMessageText="CombinedList2: ${var:DistanceFrom2Split}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="15" LogMessageText="CombinedList2: ${var:DistanceFrom2Split}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="16" LogMessageText="CombinedList3: ${var:DistanceFrom3Split}" LogLevel="Verbose" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="16" LogMessageText="CombinedList3: ${var:DistanceFrom3Split}" LogLevel="Verbose" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="AssignPlayers" Id="589ddcab-6b63-492d-8721-d7f9d0e4df7b" RegularExpression="" RefirePeriodExpression="50">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="NCount" VariableExpression="${var:NCount}+2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="NCount" VariableExpression="${var:NCount}+2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="MarkPlayer1" VariableExpression="${lvar:DistanceFrom1Join[${var:NCount}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="2" VariableOp="SetString" VariableName="MarkPlayer1" VariableExpression="${lvar:DistanceFrom1Join[${var:NCount}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:MarkPlayer1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="MarkPlayer2" VariableExpression="${lvar:DistanceFrom2Join[${var:NCount}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="MarkPlayer2" VariableExpression="${lvar:DistanceFrom2Join[${var:NCount}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:MarkPlayer2}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="MarkPlayer3" VariableExpression="${lvar:DistanceFrom3Join[${var:NCount}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="4" VariableOp="SetString" VariableName="MarkPlayer3" VariableExpression="${lvar:DistanceFrom3Join[${var:NCount}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:MarkPlayer3}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="56941804-bbb4-4c52-8f52-264142312186" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="56941804-bbb4-4c52-8f52-264142312186" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:NCount}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="580591c8-3d67-4c52-ae93-d54b7cceebcb" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="580591c8-3d67-4c52-ae93-d54b7cceebcb" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:NCount}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" LogMessageText="MarkPlayer1 ${var:MarkPlayer1}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="7" LogMessageText="MarkPlayer1 ${var:MarkPlayer1}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="8" LogMessageText="MarkPlayer2 ${var:MarkPlayer2}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="8" LogMessageText="MarkPlayer2 ${var:MarkPlayer2}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="9" LogMessageText="MarkPlayer3 ${var:MarkPlayer3}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="9" LogMessageText="MarkPlayer3 ${var:MarkPlayer3}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="DistanceCalculator" Id="9b357f48-7bcf-42d9-8bec-ecb7de3d13e4" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" ListVariableOp="Insert" ListVariableName="DistanceFrom1" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="1" ListVariableOp="Insert" ListVariableName="DistanceFrom1" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" ListVariableOp="Insert" ListVariableName="DistanceFrom1" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+          <Action OrderNumber="2" ListVariableOp="Insert" ListVariableName="DistanceFrom1" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" ListVariableIndex="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" ListVariableOp="Insert" ListVariableName="DistanceFrom1" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="3" ListVariableOp="Insert" ListVariableName="DistanceFrom1" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" ListVariableIndex="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" ListVariableOp="Insert" ListVariableName="DistanceFrom2" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="4" ListVariableOp="Insert" ListVariableName="DistanceFrom2" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" ListVariableOp="Insert" ListVariableName="DistanceFrom2" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="5" ListVariableOp="Insert" ListVariableName="DistanceFrom2" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" ListVariableIndex="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" ListVariableOp="Insert" ListVariableName="DistanceFrom2" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="6" ListVariableOp="Insert" ListVariableName="DistanceFrom2" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" ListVariableIndex="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" ListVariableOp="Insert" ListVariableName="DistanceFrom3" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="7" ListVariableOp="Insert" ListVariableName="DistanceFrom3" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="8" ListVariableOp="Insert" ListVariableName="DistanceFrom3" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="8" ListVariableOp="Insert" ListVariableName="DistanceFrom3" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" ListVariableIndex="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="9" ListVariableOp="Insert" ListVariableName="DistanceFrom3" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="9" ListVariableOp="Insert" ListVariableName="DistanceFrom3" ListVariableExpression="${numeric:sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" ListVariableIndex="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="10" ListVariableOp="Insert" ListVariableName="Player1DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom1[1]}:Nero1" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="10" ListVariableOp="Insert" ListVariableName="Player1DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom1[1]}:Nero1" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="11" ListVariableOp="Insert" ListVariableName="Player1DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom2[1]}:Nero2" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="11" ListVariableOp="Insert" ListVariableName="Player1DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom2[1]}:Nero2" ListVariableIndex="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="12" ListVariableOp="Insert" ListVariableName="Player1DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom3[1]}:Nero3" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="12" ListVariableOp="Insert" ListVariableName="Player1DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom3[1]}:Nero3" ListVariableIndex="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="13" ListVariableOp="Insert" ListVariableName="Player2DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom1[2]}:Nero1" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="13" ListVariableOp="Insert" ListVariableName="Player2DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom1[2]}:Nero1" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="14" ListVariableOp="Insert" ListVariableName="Player2DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom2[2]}:Nero2" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="14" ListVariableOp="Insert" ListVariableName="Player2DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom2[2]}:Nero2" ListVariableIndex="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="15" ListVariableOp="Insert" ListVariableName="Player2DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom3[2]}:Nero3" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="15" ListVariableOp="Insert" ListVariableName="Player2DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom3[2]}:Nero3" ListVariableIndex="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="16" ListVariableOp="Insert" ListVariableName="Player3DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom1[3]}:Nero1" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="16" ListVariableOp="Insert" ListVariableName="Player3DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom1[3]}:Nero1" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="17" ListVariableOp="Insert" ListVariableName="Player3DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom2[3]}:Nero2" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="17" ListVariableOp="Insert" ListVariableName="Player3DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom2[3]}:Nero2" ListVariableIndex="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="18" ListVariableOp="Insert" ListVariableName="Player3DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom3[3]}:Nero3" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
+          <Action OrderNumber="18" ListVariableOp="Insert" ListVariableName="Player3DistanceFromNero" ListVariableExpression="${lvar:DistanceFrom3[3]}:Nero3" ListVariableIndex="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="19" LogMessageText="Calc 1-1: sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="19" LogMessageText="Calc 1-1: sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="20" LogMessageText="Calc 1-2: sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="20" LogMessageText="Calc 1-2: sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="21" LogMessageText="Calc 1-3:sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="21" LogMessageText="Calc 1-3:sqrt(((abs(${var:NeroLinkXPos1}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos1}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="22" LogMessageText="Calc 2-1: sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="22" LogMessageText="Calc 2-1: sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="23" LogMessageText="Calc 2-2: sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="23" LogMessageText="Calc 2-2: sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="24" LogMessageText="Calc 2-3: sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="24" LogMessageText="Calc 2-3: sqrt(((abs(${var:NeroLinkXPos2}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos2}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="25" LogMessageText="Calc 3-1: sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="25" LogMessageText="Calc 3-1: sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[1]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[1]})^2))}:${lvar:HatchPlayer[1]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="26" LogMessageText="Calc 3-2:sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="26" LogMessageText="Calc 3-2:sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[2]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[2]})^2))}:${lvar:HatchPlayer[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="27" LogMessageText="Calc 3-3: sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="27" LogMessageText="Calc 3-3: sqrt(((abs(${var:NeroLinkXPos3}-${lvar:PlayerXPos[3]})^2))+(abs(${var:NeroLinkYPos3}-${lvar:PlayerYPos[3]})^2))}:${lvar:HatchPlayer[3]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="28" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b3d5e1d7-671e-4676-8cb0-6d3551a81476" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="28" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b3d5e1d7-671e-4676-8cb0-6d3551a81476" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="29" LogMessageText="DistanceFrom1 Player 1 ${lvar:DistanceFrom1[1]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="29" LogMessageText="DistanceFrom1 Player 1 ${lvar:DistanceFrom1[1]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="30" LogMessageText="DistanceFrom1 Player 2 ${lvar:DistanceFrom1[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="30" LogMessageText="DistanceFrom1 Player 2 ${lvar:DistanceFrom1[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="31" LogMessageText="DistanceFrom1 Player 3 ${lvar:DistanceFrom1[3]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="31" LogMessageText="DistanceFrom1 Player 3 ${lvar:DistanceFrom1[3]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="32" LogMessageText="DistanceFrom2 Player 1 ${lvar:DistanceFrom2[1]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="32" LogMessageText="DistanceFrom2 Player 1 ${lvar:DistanceFrom2[1]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="33" LogMessageText="DistanceFrom2 Player 2 ${lvar:DistanceFrom2[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="33" LogMessageText="DistanceFrom2 Player 2 ${lvar:DistanceFrom2[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="34" LogMessageText="DistanceFrom2 Player 3 ${lvar:DistanceFrom2[3]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="34" LogMessageText="DistanceFrom2 Player 3 ${lvar:DistanceFrom2[3]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="35" LogMessageText="DistanceFrom3 Player 1 ${lvar:DistanceFrom3[1]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="35" LogMessageText="DistanceFrom3 Player 1 ${lvar:DistanceFrom3[1]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="36" LogMessageText="DistanceFrom3 Player 2 ${lvar:DistanceFrom3[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="36" LogMessageText="DistanceFrom3 Player 2 ${lvar:DistanceFrom3[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="37" LogMessageText="DistanceFrom3 Player 3 ${lvar:DistanceFrom3[3]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+          <Action OrderNumber="37" LogMessageText="DistanceFrom3 Player 3 ${lvar:DistanceFrom3[3]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" IsReadme="True" Name="$$ReadMeV1.04" Id="818d5036-98e5-4935-abb5-5a0336770e76" RegularExpression="https://github.com/KingPendragoon/TenStrikeAutoMarker/blob/main/README.md" Description="V1.01&#xD;&#xA;This marks based on location of nero links and the order they are dropped in. &#xD;&#xA;&#xD;&#xA;No Test Macro:&#xD;&#xA;&#xD;&#xA;Please make sure that Default party sort is enabled in FF (Tank, Healer, DPS) and that in triggernometry it is configured under&#xD;&#xA; &quot;Options &gt; Edit Configuration &gt; FInal Fantasy XIV&quot; that player list set to &quot;Custom Order&quot; and is in the proper order as well of Tanks, Healers, DPS. &#xD;&#xA;&#xD;&#xA;This is a lot simpler of Auto Marker then that used in the UwU Gaols auto marker as priority is not needed.  &#xD;&#xA;But the basic set up of hotbar and triggernometry settings is the same.  For a visual guide please reference only the setup section&#xD;&#xA;of my uwu gaols readme at https://github.com/KingPendragoon/FFXIVJobPrioGaolAutoMarker/blob/main/README.md&#xD;&#xA;&#xD;&#xA;You will need F1-F9 set up with keybinds on the hotbar.&#xD;&#xA;&#xD;&#xA;F1: /mk attack &lt;1&gt;&#xD;&#xA;F2: /mk attack &lt;2&gt;&#xD;&#xA;F3: /mk attack &lt;3&gt;&#xD;&#xA;F4: /mk attack &lt;4&gt;&#xD;&#xA;F5; /mk attack &lt;5&gt;&#xD;&#xA;F6: /mk attack &lt;6&gt;&#xD;&#xA;F7: /mk attack &lt;7&gt;&#xD;&#xA;F8: /mk attack &lt;8&gt;&#xD;&#xA;&#xD;&#xA;F9&#xD;&#xA;/mk clear &lt;1&gt;&#xD;&#xA;&#xD;/mk clear &lt;2&gt;&#xD;&#xD;&#xA;/mk clear &lt;3&gt;&#xD;&#xD;&#xA;/mk clear &lt;4&gt;&#xD;&#xD;&#xA;/mk clear &lt;5&gt;&#xD;&#xD;&#xA;/mk clear &lt;6&gt;&#xD;&#xD;&#xA;/mk clear &lt;7&gt;&#xD;&#xA;&#xD;/mk clear &lt;8&gt;&#xD;&#xA;&#xD;&#xA;">
+      <Trigger Enabled="true" IsReadme="True" Name="$$ReadMeV1.05" Id="818d5036-98e5-4935-abb5-5a0336770e76" RegularExpression="https://github.com/KingPendragoon/TenStrikeAutoMarker/blob/main/README.md" Description="https://github.com/KingPendragoon/TenStrikeAutoMarker/blob/main/README.md">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Pref2Fix" Id="f6aa5463-3506-4ba5-a19f-c8f647992783" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
+          <Action OrderNumber="1" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
+          <Action OrderNumber="2" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
+          <Action OrderNumber="3" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
+          <Action OrderNumber="4" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
+          <Action OrderNumber="5" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
+          <Action OrderNumber="6" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="7" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="8" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="9" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="9" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="10" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="10" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="11" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="11" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="12" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="12" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="13" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="13" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="14" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="14" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="15" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="15" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="16" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="16" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="17" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="17" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="18" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="18" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[6]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="19" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="589ddcab-6b63-492d-8721-d7f9d0e4df7b" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="19" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="589ddcab-6b63-492d-8721-d7f9d0e4df7b" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Pref1Fix" Id="56941804-bbb4-4c52-8f52-264142312186" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
+          <Action OrderNumber="1" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
+          <Action OrderNumber="2" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
+          <Action OrderNumber="3" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
+          <Action OrderNumber="4" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
+          <Action OrderNumber="5" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 2 if the Player Prefers 2 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
+          <Action OrderNumber="6" VariableName="MarkPlayer1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="Check to see if between Marker 1 and Marker 3 if the Player Prefers 3 as their number 1 priority">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer1}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="7" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="8" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="9" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="9" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="10" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="10" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="11" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="11" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="12" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="12" VariableName="MarkPlayer2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer2}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="13" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="13" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="14" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="14" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player1NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player1NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="15" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="15" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="16" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="16" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player2NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player2NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="17" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="17" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="18" LogLevel="-1" MouseX="" MouseY="" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+          <Action OrderNumber="18" VariableName="MarkPlayer3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${lvar:Player3NeroPref[2]}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${var:MarkPlayer3}" ExpressionTypeL="String" ExpressionR="${var:MarkPlayer2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:Player3NeroPref[3]}" ExpressionTypeL="String" ExpressionR="Nero2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="19" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f6aa5463-3506-4ba5-a19f-c8f647992783" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+          <Action OrderNumber="19" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f6aa5463-3506-4ba5-a19f-c8f647992783" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="20" LogMessageText="MarkPlayer1 ${var:MarkPlayer1}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="20" LogMessageText="MarkPlayer1 ${var:MarkPlayer1}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="21" LogMessageText="MarkPlayer2 ${var:MarkPlayer2}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="21" LogMessageText="MarkPlayer2 ${var:MarkPlayer2}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="22" LogMessageText="MarkPlayer3 ${var:MarkPlayer3}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="22" LogMessageText="MarkPlayer3 ${var:MarkPlayer3}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="23" LogMessageText="NeroPref1 Player ${lvar:Player1NeroPref[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="23" LogMessageText="NeroPref1 Player ${lvar:Player1NeroPref[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="24" LogMessageText="NeroPref2 Player ${lvar:Player2NeroPref[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="24" LogMessageText="NeroPref2 Player ${lvar:Player2NeroPref[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
-          <Action OrderNumber="25" LogMessageText="NeroPref3 Player ${lvar:Player3NeroPref[2]}" LogLevel="Info" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+          <Action OrderNumber="25" LogMessageText="NeroPref3 Player ${lvar:Player3NeroPref[2]}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
