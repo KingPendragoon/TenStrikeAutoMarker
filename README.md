@@ -1,3 +1,5 @@
+V1.05  (Needs Testing)
+
 # TenStrikeAutoMarker
 Location Based Priority for Tenstrike Auto Marking. ***This works based on the order the NeroLinks are placed in.***
 
