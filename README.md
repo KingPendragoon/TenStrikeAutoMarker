@@ -5,7 +5,7 @@ Location Based Priority for Tenstrike Auto Marking. ***This works based on the o
 
 No Test Macro for this
 
-You need triggernometry for this Version 1.1.4.1 Or higher: https://github.com/paissaheavyindustries/Triggernometry
+You need triggernometry for this https://github.com/paissaheavyindustries/Triggernometry/releases/latest
 
 Please make sure that Default party sort is enabled in FF (Tank, Healer, DPS)
 ![alt text](https://github.com/KingPendragoon/FFXIVJobPrioGaolAutoMarker/blob/main/PartySortInGame.png?raw=true)
